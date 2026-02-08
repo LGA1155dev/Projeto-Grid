@@ -11,7 +11,285 @@
   <!-- Primeiro passo, fazer a hierarquia  de cada item -->
   <style>
     
+    @font-face {
+      font-family: "DM Sans";
+      src: url(assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf) format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
 
+    @font-face {
+      font-family: "DM Sans";
+      src: url("assets/fonts/DMSans-VariableFont_opsz\,wght.ttf") format("truetype");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    :root{
+      --font-regular: "DM Sans", sans-serif;
+      --font-medium: "DM Sans", sans-serif;
+    }
+
+
+    *{
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+
+    body{
+      height: 100vh;
+    }
+
+    main.principal{
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    header.topo{
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      margin: 20px;
+      background-color: #744fdb;
+      height: 400px;
+      
+
+      & h1{
+        padding: 10px;
+        color: white;
+        text-align: center;
+        font-size: 3.3rem;
+        font-family: var(--font-regular);
+
+        & span.yelow{
+          font-weight: 450;
+          color: #ffcb6b;
+        }
+      }
+
+      & p{
+        font-size: 1.3em;
+        font-weight: 200;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      & img{
+        width: 200px;
+        margin-bottom: 10px;
+      }
+
+      & .italic{
+        font-style: italic;
+        color: white;
+      }
+
+    }
+
+    .secao-principal{
+      
+      & .plataforms{
+        padding: 10px;
+        margin: 10px;
+        border-radius: 20px;
+        display: flex;
+        flex-flow: column wrap;
+        background-color: white;
+
+       & img{
+        width: 400px;
+       }
+
+       & h1{
+        padding: 10px;
+        font-family: var(--font-regular);
+
+
+       }
+      }
+
+
+      
+      
+    }
+
+    section.calendario{
+      display: flex;
+      flex-flow: column ;
+      justify-content: flex-end;
+      margin: 20px;
+      padding: 15px;
+      border-radius: 20px;
+      height: 300px;
+      background-color: #ffcb6b;
+
+      & h1{
+        font-family: var(--font-medium);
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      & img{
+        width: 250px;
+      }
+    }
+
+    section.DashBoard{
+      border-radius: 20px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #dacffc;
+      margin: 20px;
+      height: 600px;
+
+      & h1{
+        padding: 20px;
+        font-family: var(--font-medium);
+        font-weight: 500;
+      }
+
+      & img{
+        width: 400px;
+      }
+
+      & p{
+
+        padding: 20px;
+        font-weight: 300;
+        font-size: 1.7em;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+
+    section.DashBoard-Follower{
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      border-radius: 20px;
+      padding: 10px;
+      background-color: #744fdb;
+      height: 500px;
+
+      & h1{
+        font-family: var(--font-regular);
+        color: white;
+        font-weight: 500;
+        padding: 30px;
+        margin: 10px;
+        font-size: 2.5em;
+        text-align: center;
+
+      }
+
+      & img{
+        width: 300px;
+      }
+     
+    }
+
+    section.Audience{
+      background-color: white;
+      border-radius: 20px;
+      height: 200px;
+      padding: 20px;
+      margin: 20px;
+
+      & span{
+        font-size: 2.5em;
+        font-family: var(--font-medium);
+        font-weight: 600;
+      }
+
+      & h2{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+
+      & img{
+        width: 200px;
+      }
+    }
+
+    section.Create{
+      padding: 20px;
+      display: flex;
+      flex-flow: column;
+      background-color: #ebc17344;
+      border-radius: 20px;
+      margin: 20px;
+      height: 250px;
+
+      & h1{
+
+        padding: 20px;
+        font-family: var(--font-medium);
+        font-weight: 500;
+      }
+
+      & span{
+        font-weight: 700;
+        color: #744fdb;
+        font-style: italic;
+      }
+
+      & img{
+        padding: 10px;
+        width: 200px;
+      }
+    }
+
+    .AI-Content{
+      background-color: #ffcb6b;
+      padding: 20px;
+      border-radius: 10px;
+      height: 400px;
+      margin: 20px;
+
+      & h1{
+        font-family: var(--font-medium);
+        font-size: 2.5em;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+
+      & img{
+        width: 250px;
+        margin-bottom: 20px;
+      }
+    }
+
+
+    @media screen and (min-width: 1024px) {
+      main.principal{
+      }
+
+
+      .topo{
+        grid-column: 2 / 3;
+        width: 300px;
+       
+        & img{
+          width: 50px;
+        }
+      }
+
+      .plataforms{
+        grid-column: 2 / 3;
+      }
+
+
+
+      
+    }
 
 
     .attribution { font-size: 11px; text-align: center; }
@@ -19,30 +297,95 @@
   </style>
 </head>
 <body>
-
-  <h1>
-    Social Media 10x Faster with AI
-    Over 4,000 5-star reviews
-  </h1>
-
-  Manage multiple accounts and platforms.
-
-  Maintain a consistent posting schedule.
-
-  Schedule to social media.
-  Optimize post timings to publish content at the perfect time for your audience.
+<main class="principal">
   
-  Grow followers with non-stop content.
-
-  >56% faster audience growth
+<header class="topo">
   
-  Create and schedule content quicker.
+      <h1>
+        Social Media <span class="yelow">10x</span> <span class="italic">Faster </span> with AI
+      </h1>
 
-  Write your content using AI.
+      <img src="assets/images/illustration-five-stars.webp" alt="">
+
+        <p>Over 4,000 5-star reviews</p>
   
+</header>
+  
+    <section class="secao-principal">
+
+      <section class="plataforms">
+        <!--Imagem de redes, instagram e do X-->
+        <img src="assets/images/illustration-multiple-platforms.webp" alt="">
+        <h1>Manage multiple accounts and platforms.</h1>
+      </section>
+
+      <section class="calendario">
+        
+        <h1>
+          Maintain a consistent posting schedule.
+        </h1>
+
+        <img src="assets/images/illustration-consistent-schedule.webp" alt="">
+
+      </section>
+
+      <section class="DashBoard">
+
+        <h1>Schedule to social media.</h1>
+
+        <img src="assets/images/illustration-schedule-posts.webp" alt="">
+
+        <p>Optimize post timings to publish content at the perfect time for your audience.</p>
+        
+      </section>
+
+      <section class="DashBoard-Follower">
+
+
+        <img src="assets/images/illustration-grow-followers.webp" alt="">
+
+        <h1>Grow followers with non-stop content.</h1>
+      
+      </section>
+
+      <!--Fotos de audientes-->
+      <section class="Audience">
+
+        <span>>56%</span>
+        
+        <h2>faster audience growth</h2>
+
+        <img src="assets/images/illustration-audience-growth.webp" alt="">
+
+        </section>
+
+        <!--Create Posts-->
+      <section class="Create">
+        <h1>
+          Create and schedule content <span>quicker.</span>
+        </h1>
+
+        <img src="assets/images/illustration-create-post.webp" alt="">
+      </section>
+
+
+      <!-- Seção de fotos de contúdo usando AI -->
+      <section class="AI-Content">
+
+        <h1>Write your content using AI.</h1>
+
+        <img src="assets/images/illustration-ai-content.webp" alt="">
+
+        </section>
+
+    </section>
+</main>
+
+<!--
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+-->
 </body>
 </html>
